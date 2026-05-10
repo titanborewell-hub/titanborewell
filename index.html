@@ -240,3 +240,106 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITAN Borewell & Drilling</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --primary: #facc15; --bg: #0f172a; --card: #1e293b; --text: #cbd5e1; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: var(--bg); color: white; overflow-x: hidden; }
+
+        /* --- HEADER & NEW LOGO --- */
+        header {
+            position: fixed; top: 15px; left: 5%; width: 90%; height: 80px;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 20px; background: rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .logo { display: flex; align-items: center; cursor: pointer; }
+        
+        /* Logo Size Fix */
+        .logo img {
+            height: 60px; /* Aapki photo ke hisaab se height */
+            width: auto;
+            filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.3));
+            transition: 0.3s;
+        }
+
+        nav { display: flex; gap: 20px; }
+        .nav-link { 
+            text-decoration: none; color: var(--text); font-size: 11px; 
+            display: flex; flex-direction: column; align-items: center; cursor: pointer; 
+        }
+        .nav-link i { font-size: 18px; margin-bottom: 3px; }
+        .nav-link:hover { color: var(--primary); }
+
+        .call-btn {
+            border: 2px solid var(--primary); color: var(--primary);
+            padding: 8px 15px; border-radius: 10px; text-decoration: none;
+            font-weight: 700; font-size: 12px;
+        }
+
+        /* --- HERO --- */
+        .hero { padding: 180px 8% 60px; text-align: center; }
+        .hero h2 { font-size: 35px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+        .hero h2 span { color: var(--primary); }
+        .hero p { color: var(--text); margin-bottom: 30px; }
+
+        .main-btn {
+            background: var(--primary); color: black; border: none; padding: 15px 40px;
+            border-radius: 12px; font-weight: 800; font-size: 16px; cursor: pointer;
+        }
+
+        /* --- MODAL --- */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 3000; }
+        .modal-content { 
+            background: var(--card); margin: 50px auto; padding: 30px; 
+            width: 90%; max-width: 500px; border-radius: 20px; border: 1px solid var(--primary);
+        }
+        form input, form textarea {
+            width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; 
+            border: 1px solid #334155; background: var(--bg); color: white;
+        }
+
+        @media (max-width: 768px) {
+            .logo img { height: 45px; }
+            nav { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" onclick="location.reload()">
+            <img src="logo.png" alt="TITAN LOGO">
+        </div>
+        <nav>
+            <a href="#" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
+            <a onclick="openServices()" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i>Services</a>
+            <a onclick="askAdmin()" class="nav-link"><i class="fa-solid fa-lock"></i>Admin</a>
+        </nav>
+        <a href="tel:+917310399124" class="call-btn">CALL</a>
+    </header>
+
+    <section class="hero">
+        <h2>Premium <span>Borewell</span><br>Drilling Experts</h2>
+        <p>15+ Years of Experience in Water Solutions.</p>
+        <button class="main-btn" onclick="openServices()">START BOOKING</button>
+    </section>
+
+    <script>
+        function openServices() { alert("Aapki website ready hai! Bas logo upload karein."); }
+        function askAdmin() { let p = prompt("Password:"); if(p === "titan123") alert("Welcome Admin!"); }
+    </script>
+</body>
+</html>
+
