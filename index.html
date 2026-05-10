@@ -267,8 +267,11 @@
         .logo { display: flex; align-items: center; cursor: pointer; }
         
         /* Logo Size Fix */
-        .logo img {
-            <img src="logo.png" style="height: 60px; width: auto;" alt="TITAN LOGO">
+        .logo img 
+            <<div class="logo" onclick="location.reload()">
+    <img src="logo.png" onerror="this.src='https://raw.githubusercontent.com/titanborewell-hub/titanborwell/main/logo.png'" alt="TITAN LOGO">
+</div>
+        ">
 
             width: auto;
             filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.3));
